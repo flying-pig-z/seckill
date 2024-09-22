@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 public class OrderMessageListener implements RocketMQListener<Order> {
 
     @Autowired
-    private IOrderService orderService; // 注入你的订单服务
+    private IOrderService orderService;
 
     @Autowired
     RocketMQTemplate rocketMQTemplate;
