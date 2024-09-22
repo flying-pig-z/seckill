@@ -26,7 +26,6 @@ public class OrderMessageListener implements RocketMQListener<Order> {
         orderService.save(order);
 
         // 发送延迟消息来取消订单
-        // 发送延迟消息来取消订单
         String cancelOrderTopic = "cancel-order-topic";
 
         // 使用 Spring 的 MessageBuilder 来构建消息，并设置延迟等级

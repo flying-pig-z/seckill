@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
 public class CancelOrderListener implements RocketMQListener<String> {
 
     @Autowired
-    private IOrderService orderService; // 注入你的订单服务
+    private IOrderService orderService;
 
     @Override
     public void onMessage(String orderId) {
-        // 取消订单的逻辑
+        // 取消订单
         orderService.cancelOrder(orderId);
     }
 }
